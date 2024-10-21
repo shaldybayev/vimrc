@@ -5,7 +5,7 @@ Plug 'junegunn/vim-plug'
 Plug 'joshdick/onedark.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'jackguo380/vim-lsp-cxx-highlight'
+Plug 'dense-analysis/ale'↲
 Plug 'Yggdroot/indentLine'
 " add this line to your .vimrc file
 Plug 'mattn/emmet-vim'
