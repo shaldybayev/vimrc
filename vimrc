@@ -1,13 +1,12 @@
 call plug#begin('~/.vim/plugged')
-
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'tpope/vim-commentary'
+Plug 'preservim/nerdtree'↲
 Plug 'junegunn/vim-plug'
 Plug 'joshdick/onedark.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dense-analysis/ale'↲
 Plug 'Yggdroot/indentLine'
-" add this line to your .vimrc file
 Plug 'mattn/emmet-vim'
 Plug 'ap/vim-css-color'
 Plug 'tpope/vim-surround'
