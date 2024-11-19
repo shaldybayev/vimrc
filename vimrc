@@ -10,6 +10,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'mattn/emmet-vim'
 Plug 'ap/vim-css-color'
 Plug 'tpope/vim-surround'
+Plug 'wfxr/minimap.vim'
 call plug#end()
 
 
@@ -43,6 +44,12 @@ let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 """"let g:user_emmet_mode = 'a'
 " Переназначение клавиш для Emmet
 nmap <C-y>,/ <Plug>(emmet-comment)
+
+"MinimapToggle
+let g:minimap_width = 10  " Ширина мини-карты
+let g:minimap_auto_start = 1  " Автозапуск мини-карты
+let g:minimap_auto_start_win_enter = 1
+
 
 
 " Дополнительные настройки для подстветки синтаксиса HTML
