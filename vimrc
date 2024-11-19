@@ -49,7 +49,8 @@ nmap <C-y>,/ <Plug>(emmet-comment)
 let g:minimap_width = 10  " Ширина мини-карты
 let g:minimap_auto_start = 1  " Автозапуск мини-карты
 let g:minimap_auto_start_win_enter = 1
-
+"Клавиша F8 вкл/выкл minimap
+nnoremap <F8> :MinimapToggle<CR>
 
 
 " Дополнительные настройки для подстветки синтаксиса HTML
