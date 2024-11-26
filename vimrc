@@ -11,6 +11,7 @@ Plug 'mattn/emmet-vim'
 Plug 'ap/vim-css-color'
 Plug 'tpope/vim-surround'
 Plug 'wfxr/minimap.vim'
+Plug 'preservim/tagbar'
 call plug#end()
 
 
@@ -52,6 +53,8 @@ let g:minimap_auto_start_win_enter = 1
 "Клавиша F8 вкл/выкл minimap
 nnoremap <F8> :MinimapToggle<CR>
 
+" Tagbar
+nnoremap <F7> :TagbarToggle<CR>
 
 " Дополнительные настройки для подстветки синтаксиса HTML
 autocmd FileType html setlocal ts=2 sts=2 sw=2 expandtab
