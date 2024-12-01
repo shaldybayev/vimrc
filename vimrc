@@ -12,6 +12,7 @@ Plug 'ap/vim-css-color'
 Plug 'tpope/vim-surround'
 Plug 'wfxr/minimap.vim'
 Plug 'preservim/tagbar'
+Plug 'tpope/vim-dispatch'↲
 call plug#end()
 
 
@@ -48,11 +49,30 @@ nmap <C-y>,/ <Plug>(emmet-comment)
 
 "MinimapToggle
 let g:minimap_width = 10  " Ширина мини-карты
-let g:minimap_auto_start = 1  " Автозапуск мини-карты
-let g:minimap_auto_start_win_enter = 1
+let g:minimap_auto_start = 0  " Автозапуск мини-карты
+let g:minimap_auto_start_win_enter = 0
 "Клавиша F8 вкл/выкл minimap
 nnoremap <F8> :MinimapToggle<CR>
 
+" Dispatch↲
+"nnoremap <F6> :w<CR>:Dispatch python3 %<CR>↲
+" Переменная для отслеживания состояния окна Dispatch↲
+let g:dispatch_window_open = 0↲
+
+" Функция для открытия/закрытия окна Dispatch↲
+function! ToggleDispatch()↲
+  if g:dispatch_window_open == 0↲
+    " Запускаем Dispatch и сохраняем состояние↲
+    Dispatch python3 %↲
+    let g:dispatch_window_open = 1↲
+  else↲
+    " Закрываем окно Dispatch, если оно открыто↲
+    exe "cclose" | let g:dispatch_window_open = 0↲
+  endif↲
+endfunction↲
+
+" Привязываем F6 к функции ToggleDispatch↲
+nnoremap <F6> :call ToggleDispatch()<CR>↲
 " Tagbar
 nnoremap <F7> :TagbarToggle<CR>
 
