@@ -13,6 +13,7 @@ Plug 'tpope/vim-surround'
 Plug 'wfxr/minimap.vim'
 Plug 'preservim/tagbar'
 Plug 'tpope/vim-dispatch'↲
+Plug 'terryma/vim-smooth-scroll'
 call plug#end()
 
 
