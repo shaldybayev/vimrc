@@ -37,6 +37,9 @@ set listchars=trail:·,precedes:«,extends:»,eol:↲,tab:▸\
 """"
 """"filetype plugin indent on
 
+" Автосохранение через определённое время (например, 2 секунды)
+set updatetime=2000  " время в миллисекундах↲
+autocmd CursorHold * silent! write↲
 
 "EMMET config
 let g:user_emmet_leader_key=','
