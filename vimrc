@@ -114,30 +114,8 @@ colorscheme onedark
 
 map <C-n> :NERDTreeToggle<CR>
 
-" nnoremap <F5> :!python3 %<CR>↲
+nnoremap <F5> :!python3 %<CR>↲
 
-" Функция для F5: компиляция и закрытие при повторном нажатии
-function! ToggleRun()
-    if exists("g:dispatch_running") && g:dispatch_running
-        cclose
-        let g:dispatch_running = 0
-    else
-        let g:dispatch_running = 1
-        if &filetype == 'c'
-            Dispatch clang -Wall -Wextra -o %:r % && ./%:r
-        elseif &filetype == 'cpp'
-            Dispatch clang++ -Wall -Wextra -std=c++17 -o %:r % && ./%:r
-        elseif &filetype == 'python'
-            Dispatch python3 %
-        endif
-    endif
-endfunction
-
-" Привязываем F5 к функции ToggleRun
-nnoremap <F5> :call ToggleRun()<CR>
-
-" F6 уже привязан к ToggleDispatch
-nnoremap <F6> :call ToggleDispatch()<CR>
 
 
 "Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
