@@ -51,6 +51,12 @@ let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 " Переназначение клавиш для Emmet
 nmap <C-y>,/ <Plug>(emmet-comment)
 
+" F3 для отладки python
+nmap <F3> :w<CR>:!python -m pdb %<CR>
+
+" F4 для отладки python
+nmap <F4> :w<CR>:!python -m pudb %<CR>
+
 "MinimapToggle
 let g:minimap_width = 10  " Ширина мини-карты
 let g:minimap_auto_start = 0  " Автозапуск мини-карты
