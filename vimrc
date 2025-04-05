@@ -64,22 +64,6 @@ let g:minimap_auto_start_win_enter = 0
 "Клавиша F8 вкл/выкл minimap
 nnoremap <F8> :MinimapToggle<CR>
 
-" Dispatch↲
-"nnoremap <F6> :w<CR>:Dispatch python3 %<CR>↲
-" Переменная для отслеживания состояния окна Dispatch↲
-let g:dispatch_window_open = 0↲
-
-" Функция для открытия/закрытия окна Dispatch↲
-function! ToggleDispatch()↲
-  if g:dispatch_window_open == 0↲
-    " Запускаем Dispatch и сохраняем состояние↲
-    Dispatch python3 %↲
-    let g:dispatch_window_open = 1↲
-  else↲
-    " Закрываем окно Dispatch, если оно открыто↲
-    exe "cclose" | let g:dispatch_window_open = 0↲
-  endif↲
-endfunction↲
 
 " Привязываем F6 к функции ToggleDispatch↲
 nnoremap <F6> :call ToggleDispatch()<CR>↲
@@ -88,7 +72,6 @@ nnoremap <F7> :TagbarToggle<CR>
 
 " Дополнительные настройки для подстветки синтаксиса HTML
 autocmd FileType html setlocal ts=2 sts=2 sw=2 expandtab
-
 
 
 ino " ""<left>
@@ -121,7 +104,6 @@ colorscheme onedark
 map <C-n> :NERDTreeToggle<CR>
 
 nnoremap <F5> :!python3 %<CR>↲
-
 
 
 "Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
